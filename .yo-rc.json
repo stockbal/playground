@@ -1,0 +1,14 @@
+{
+  "generator-ui5-ts-app": {
+    "application": "playground",
+    "namespace": "com.devepos.apps",
+    "framework": "SAPUI5",
+    "frameworkVersion": "1.91.0",
+    "author": "Ludwig Stockbauer-Muhr",
+    "tstypes": "@sapui5/ts-types-esm",
+    "tstypesVersion": "1.91.0",
+    "appId": "com.devepos.apps.playground",
+    "appURI": "com/devepos/apps/playground",
+    "setupCompleted": true
+  }
+}
