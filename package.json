@@ -11,11 +11,11 @@
     "build:ui5": "ui5 build --clean-dest",
     "build:ui5:opt": "ui5 build self-contained --clean-dest --all",
     "compile:less": "less-watch-compiler src/css webapp/css main.less --run-once",
-    "start": "npm-run-all clean --parallel watch:ts watch:less start:ui5",
+    "start": "npm-run-all clean build:ts --parallel watch:ts watch:less start:ui5",
     "clean": "rimraf webapp dist",
     "watch:ts": "babel src --out-dir webapp --source-maps inline --extensions \".ts,.js\" --copy-files --watch",
     "watch:less": "less-watch-compiler src/css webapp/css main.less",
-    "start:ui5": "ui5 serve --port 8080 -o index.html",
+    "start:ui5": "ui5 serve --port 8080 -o index.html?sap-ui-theme=\"sap_fiori_3_dark\"",
     "start:dist": "ui5 serve  --port 8080 -o index.html --config ui5-dist.yaml",
     "ts-typecheck": "tsc --noEmit",
     "lint": "eslint src"
