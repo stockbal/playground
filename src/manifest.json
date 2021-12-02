@@ -1,5 +1,5 @@
 {
-  "_version": "1.12.0",
+  "_version": "1.33.0",
   "sap.app": {
     "id": "com.devepos.apps.playground",
     "type": "application",
@@ -7,7 +7,7 @@
     "title": "{{app_title}}",
     "description": "{{app_description}}",
     "applicationVersion": {
-      "version": "1.0.0"
+      "version": "${version}"
     }
   },
   "sap.ui": {
@@ -39,6 +39,14 @@
     "contentDensities": {
       "compact": true,
       "cozy": true
+    },
+    "resources": {
+      "css": [
+        {
+          "id": "main",
+          "uri": "css/main.css"
+        }
+      ]
     },
     "models": {
       "i18n": {

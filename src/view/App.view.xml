@@ -4,7 +4,7 @@
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
 
-	<App id="app">
+	<App id="app" class="comDevEpPlgrnd">
 		<MessagePage
 			title="{i18n>app_title}"
 			text="{i18n>app_title}"

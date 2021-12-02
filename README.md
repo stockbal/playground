@@ -5,6 +5,14 @@
 This repository is used to try out new things in SAPUI5/OpenUI5 development. The **main** branch will be the template branch and should not adjusted - apart from fixing/updating the general setup (i.e. typescript, babel, etc.).  
 A new feature (e.g. custom control) should be created in a new branch
 
+## Project layout
+
+The base structure of the playground application was generated with the [easy-ui5-generator](https://github.com/SAP/generator-easy-ui5) and has been extended with the following features:
+
+- live compilation `.less` files during development
+- added a `BaseController` class
+- added a `models` utility for creating JSON models
+
 ## Preparation
 
 Use `npm` (or `yarn`) to install the dependencies:
