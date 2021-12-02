@@ -1,23 +1,9 @@
-# playground
+# UI5 typesscript playground
 
 ## Description
 
-This app demonstrates a TypeScript setup for developing UI5 applications.
-
-**The template is inspired by the [`SAP-samples/ui5-typescript-helloworld`](https://github.com/SAP-samples/ui5-typescript-helloworld) project which  also contains [a detailed step-by-step guide](https://github.com/SAP-samples/ui5-typescript-helloworld/blob/main/step-by-step.md). It explains how this setup is created and how all the bits and pieces fit together**
-
-| :point_up: Overview of TypeScript-related Entities |
-|:---------------------------|
-| The UI5 type definitions (`*.d.ts` files) are loaded as dev dependency from [npm](https://www.npmjs.com/package/@openui5/ts-types-esm). They are work in progress, so while they should be working well already, we are still improving them, which might also lead to breaking changes. |
-| The file [tsconfig.json](tsconfig.json) contains the configuration for the TypeScript compilation, including a reference to these UI5 `*.d.ts` files. |
-| Normally, the UI5 JavaScript files (controllers, Component.js etc.) would reside in the `webapp` folder. Now they are in the [src](src) folder. The TypeScript compilation will create the `webapp` folder and put all output there. |
-| In addition to the TypeScript compilation, there is also a conversion from the ES6 module and class syntax used in the source files to the classic UI5 module loading and class definition syntax (`sap.ui.define(...)` and `superClass.extend(...)`). This conversion is using the [babel-plugin-transform-modules-ui5](https://github.com/r-murphy/babel-plugin-transform-modules-ui5) project from Ryan Murphy. |
-| Both, the TypeScript compilation and the ES6 syntax transformation, are executed by Babel, as configured in the file [.babelrc.json](.babelrc.json) |
-| This combined transformation is triggered by both the `build:ts` and `watch:ts` scripts in [package.json](package.json). |
-
-## Requirements
-
-Either [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) for dependency management.
+This repository is used to try out new things in SAPUI5/OpenUI5 development. The **main** branch will be the template branch and should not adjusted - apart from fixing/updating the general setup (i.e. typescript, babel, etc.).  
+A new feature (e.g. custom control) should be created in a new branch
 
 ## Preparation
 
@@ -37,7 +23,7 @@ Execute the following command to run the app locally for development in watch mo
 npm start
 ```
 
-As shown in the terminal after executing this command, the app is then running on http://localhost:8080/index.html. A browser window with this URL should automatically open.
+As shown in the terminal after executing this command, the app is then running on <http://localhost:8080/index.html>. A browser window with this URL should automatically open.
 
 (When using yarn, do `yarn start` instead.)
 
@@ -106,7 +92,6 @@ npm run lint
 ## References
 
 Once you have understood the setup and want to inspect the code of a slightly more comprehensive UI5 app written in TypeScript, you can check out the [TypeScript version of the UI5 CAP Event App Sample](https://github.com/SAP-samples/ui5-cap-event-app/tree/typescript).
-
 
 ## License
 
