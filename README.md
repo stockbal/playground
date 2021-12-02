@@ -1,4 +1,4 @@
-# UI5 typesscript playground
+# UI5 typescript playground
 
 ## Description
 
