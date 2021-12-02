@@ -10,8 +10,10 @@
     "build:ts": "babel src --out-dir webapp --source-maps inline --extensions \".ts,.js\" --copy-files",
     "build:ui5": "ui5 build --clean-dest",
     "build:ui5:opt": "ui5 build self-contained --clean-dest --all",
+    "compile:less": "less-watch-compiler dev/css webapp/css main.less --run-once",
     "start": "npm-run-all --parallel watch:ts start:ui5",
     "watch:ts": "babel src --out-dir webapp --source-maps inline --extensions \".ts,.js\" --copy-files --watch",
+    "watch:less": "less-watch-compiler dev/css webapp/css main.less",
     "start:ui5": "ui5 serve --port 8080 -o index.html",
     "start:dist": "ui5 serve  --port 8080 -o index.html --config ui5-dist.yaml",
     "ts-typecheck": "tsc --noEmit",
@@ -29,7 +31,11 @@
     "@ui5/cli": "^2.10.4",
     "babel-preset-transform-ui5": "^7.0.3",
     "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "npm-run-all": "^4.1.5",
+    "prettier": "^2.5.0",
+    "rimraf": "^3.0.2",
     "typescript": "^4.3.2",
     "ui5-middleware-livereload": "^0.5.4"
   },
@@ -37,5 +43,31 @@
     "dependencies": [
       "ui5-middleware-livereload"
     ]
-  }
+  },
+  "prettier": {
+    "tabWidth": 4,
+    "printWidth": 100,
+    "semi": true,
+    "trailingComma": "none",
+    "arrowParens": "avoid",
+    "singleQuote": false,
+    "endOfLine": "lf",
+    "overrides": [
+      {
+        "files": [
+          "*.json",
+          "*.yaml"
+        ],
+        "options": {
+          "tabWidth": 2
+        }
+      }
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
 }

@@ -1,28 +1,23 @@
 {
-    "compilerOptions": {
-        "target": "es2015",
-        "module": "es2015",
-        "skipLibCheck": true,
-        "preserveConstEnums": true,
-        "sourceMap": false,
-        "allowJs": true,
-        "strict": true,
-        "strictNullChecks": false,
-        "strictPropertyInitialization": false,
-        "rootDir": "./src",
-        "outDir": "./dist",
-        "baseUrl": "./",
-        "typeRoots": [
-            "./node_modules/@types",
-            "./node_modules/@sapui5/ts-types-esm"
-        ],
-        "paths": {
-            "com/devepos/apps/playground/*": [
-                "./src/*"
-            ]
-        }
-    },
-    "include": [
-        "./src/**/*"
-    ]
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "es2015",
+    "lib": ["DOM", "ES2017"],
+    "skipLibCheck": true,
+    "preserveConstEnums": true,
+    "sourceMap": false,
+    "allowJs": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "strictPropertyInitialization": false,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "typeRoots": ["./node_modules/@types", "./node_modules/@sapui5/ts-types-esm"],
+    "paths": {
+      "com/devepos/apps/playground/*": ["./src/*"],
+      "sap/ui/thirdparty/jquery": ["node_modules/@types/jquery/index.d.ts"]
+    }
+  },
+  "include": ["./src/**/*"]
 }
